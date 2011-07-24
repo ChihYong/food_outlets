@@ -1,2 +1,22 @@
-<h1>Pages#food_outlets</h1>
-<p>Find me in app/views/pages/food_outlets.html.erb</p>
+<div class="graytitle">
+	Outlets
+</div>
+<ul class="pageitem">
+	<% @outlets.each do |outlet| %>
+	<li class="menu">
+		<span class="name"><%= link_to outlet.name, outlet %></span>
+		<span class="arrow"><%= link_to "", outlet %></span>
+	</li>
+	<% end %>
+</ul>
+<div class="graytitle">
+	Canteens
+</div>
+<ul class="pageitem">
+	<% @canteens.each do |canteen| %>
+	<li class="menu">
+		<span class="name"><%= link_to canteen.name, canteen %></span>
+		<span class="arrow"><%= link_to "", canteen %></span>
+	</li>
+	<% end %>
+</ul>
