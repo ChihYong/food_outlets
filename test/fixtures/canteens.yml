@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  location: MyText
+  no_of_stalls: 1
+  operating_hours: MyText
+  image_url: MyString
+  announcement: MyText
+
+two:
+  name: MyString
+  location: MyText
+  no_of_stalls: 1
+  operating_hours: MyText
+  image_url: MyString
+  announcement: MyText

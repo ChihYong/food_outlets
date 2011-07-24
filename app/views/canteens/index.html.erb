@@ -1,0 +1,33 @@
+<h1>Listing canteens</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>No of stalls</th>
+    <th>Operating hours</th>
+    <th>Image url</th>
+    <th>Announcement</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @canteens.each do |canteen| %>
+  <tr>
+    <td><%= canteen.name %></td>
+    <td><%= canteen.location %></td>
+    <td><%= canteen.no_of_stalls %></td>
+    <td><%= canteen.operating_hours %></td>
+    <td><%= canteen.image_url %></td>
+    <td><%= canteen.announcement %></td>
+    <td><%= link_to 'Show', canteen %></td>
+    <td><%= link_to 'Edit', edit_canteen_path(canteen) %></td>
+    <td><%= link_to 'Destroy', canteen, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Canteen', new_canteen_path %>

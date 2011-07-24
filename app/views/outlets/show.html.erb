@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @outlet.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @outlet.location %>
+</p>
+
+<p>
+  <b>Operating hours:</b>
+  <%= @outlet.operating_hours %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @outlet.contact %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @outlet.image_url %>
+</p>
+
+<p>
+  <b>Announcements:</b>
+  <%= @outlet.announcements %>
+</p>
+
+
+<%= link_to 'Edit', edit_outlet_path(@outlet) %> |
+<%= link_to 'Back', outlets_path %>
