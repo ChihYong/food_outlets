@@ -1,4 +1,6 @@
 FoodOutlets::Application.routes.draw do
+  resources :canteens
+
   resources :outlets
 
   get "pages/home"
