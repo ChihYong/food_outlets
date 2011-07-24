@@ -1,11 +1,10 @@
 FoodOutlets::Application.routes.draw do
+  match '/home', :to => 'pages#home'
+  match '/food_outlets', :to => 'pages#food_outlets'
+  
   resources :canteens
 
   resources :outlets
-
-  get "pages/home"
-
-  get "pages/food_outlets"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
