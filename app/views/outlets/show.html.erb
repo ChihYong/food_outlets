@@ -1,35 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @outlet.name %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= @outlet.location %>
-</p>
-
-<p>
-  <b>Operating hours:</b>
-  <%= @outlet.operating_hours %>
-</p>
-
-<p>
-  <b>Contact:</b>
-  <%= @outlet.contact %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @outlet.image_url %>
-</p>
-
-<p>
-  <b>Announcements:</b>
-  <%= @outlet.announcements %>
-</p>
-
-
-<%= link_to 'Edit', edit_outlet_path(@outlet) %> |
-<%= link_to 'Back', outlets_path %>
+<%= @title = "Outlet" %>
+<div id="content">
+	<div class="graytitle">
+		<%= @outlet.name %>
+	</div>
+	<ul class="pageitem">
+		<li class="textbox">
+			<p>
+				<%= image_tag(@outlet.image_url) %>
+			</p>
+		</li>
+		<li class="textbox">
+			<span class="name"><%= simple_format(@outlet.location) %></span><span class="ext"></span>
+			<br>
+			<span class="name"><%= simple_format(@outlet.operating_hours) %></span><span class="ext"></span>
+			<br>
+			<span class="name"><%= simple_format(@outlet.contact) %></span><span class="ext"></span>
+		</li>
+	</ul>
+	<p>
+		<%= @outlet.announcements %>
+	</p>
+	<%= link_to 'Edit', edit_outlet_path(@outlet) %> |
+	<%= link_to 'Back', outlets_path %>
+</div>
