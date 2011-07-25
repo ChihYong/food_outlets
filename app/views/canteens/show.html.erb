@@ -17,14 +17,13 @@
 			<span class="name"><%= simple_format(@canteen.operating_hours) %></span><span class="ext"></span>
 			<!--
 			<p>
-			<b>Announcement:</b>
-			<%= @canteen.announcement %>
+			<%= simple_format(@canteen.announcement) %>
 			</p>
 			-->
 		</li>
 	</ul>
+	<% if admin? %>
+	<%= link_to 'Edit', edit_canteen_path(@canteen) %> |
+	<%= link_to 'Back', canteens_path %>
+	<% end %>
 </div>
-<% if admin? %>
-<%= link_to 'Edit', edit_canteen_path(@canteen) %> |
-<%= link_to 'Back', canteens_path %>
-<% end %>

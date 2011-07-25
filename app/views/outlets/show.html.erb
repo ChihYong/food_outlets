@@ -18,7 +18,7 @@
 		</li>
 	</ul>
 	<p>
-		<%= @outlet.announcements %>
+		<%= simple_format(@outlet.announcements) %>
 	</p>
 	<% if admin? %>
 	<%= link_to 'Edit', edit_outlet_path(@outlet) %> |

@@ -1,4 +1,6 @@
 class StallsController < ApplicationController
+  
+  before_filter :authorize, :except => [:show]
   # GET /stalls
   # GET /stalls.xml
   def index

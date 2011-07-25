@@ -1,50 +1,28 @@
 <% @title = "Stall" %>
-
-<p>
-  <b>Name:</b>
-  <%= @stall.name %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= @stall.location %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @stall.category %>
-</p>
-
-<p>
-  <b>Food type:</b>
-  <%= @stall.food_type %>
-</p>
-
-<p>
-  <b>Operating hours:</b>
-  <%= @stall.operating_hours %>
-</p>
-
-<p>
-  <b>Price range:</b>
-  <%= @stall.price_range %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @stall.image_url %>
-</p>
-
-<p>
-  <b>Announcement:</b>
-  <%= @stall.announcement %>
-</p>
-
-<p>
-  <b>Canteen:</b>
-  <%= @stall.canteen %>
-</p>
-
-
-<%= link_to 'Edit', edit_stall_path(@stall) %> |
-<%= link_to 'Back', stalls_path %>
+<div id="content">
+	<div class="graytitle">
+		<%= @stall.name %>
+	</div>
+	<ul class="pageitem">
+		<li class="textbox">
+			<p>
+				<%= image_tag @stall.image_url %>
+			</p>
+		</li>
+		<li class="textbox">
+			<span class="name"><%= @stall.location %></span>
+			<span class="ext"></span>
+			<br>
+			<br>
+			<span class="name">Price range: <%= @stall.price_range %></span>
+			<span class="ext"></span>
+		</li>
+	</ul>
+	<ul class="pageitem">
+		<%= simple_format(@stall.announcement) %>
+	</ul>
+	<% if admin? %>
+	<%= link_to 'Edit', edit_stall_path(@stall) %> |
+	<%= link_to 'Back', stalls_path %>
+	<% end %>
+</div>

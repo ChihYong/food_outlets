@@ -1,18 +1,18 @@
 FoodOutlets::Application.routes.draw do
 
-  resources :stalls
-
   get "login" => "sessions#new", :as => "login"
 
   get "logout" => "sessions#destroy", :as => "logout"
 
   match '/food_outlets', :to => 'pages#food_outlets'
-  
+
   resources :sessions
 
   resources :canteens
 
   resources :outlets
+
+  resources :stalls
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
