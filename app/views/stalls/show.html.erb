@@ -1,0 +1,50 @@
+<% @title = "Stall" %>
+
+<p>
+  <b>Name:</b>
+  <%= @stall.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @stall.location %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @stall.category %>
+</p>
+
+<p>
+  <b>Food type:</b>
+  <%= @stall.food_type %>
+</p>
+
+<p>
+  <b>Operating hours:</b>
+  <%= @stall.operating_hours %>
+</p>
+
+<p>
+  <b>Price range:</b>
+  <%= @stall.price_range %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @stall.image_url %>
+</p>
+
+<p>
+  <b>Announcement:</b>
+  <%= @stall.announcement %>
+</p>
+
+<p>
+  <b>Canteen:</b>
+  <%= @stall.canteen %>
+</p>
+
+
+<%= link_to 'Edit', edit_stall_path(@stall) %> |
+<%= link_to 'Back', stalls_path %>

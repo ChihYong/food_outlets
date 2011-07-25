@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  location: MyText
+  category: MyString
+  food_type: MyString
+  operating_hours: MyText
+  price_range: MyText
+  image_url: MyString
+  announcement: MyText
+  canteen: 
+
+two:
+  name: MyString
+  location: MyText
+  category: MyString
+  food_type: MyString
+  operating_hours: MyText
+  price_range: MyText
+  image_url: MyString
+  announcement: MyText
+  canteen: 

@@ -1,0 +1,35 @@
+<% @title = "Listing stalls" %>
+<div class="evertable">
+	<table style="margin-left:5px; margin-right:5px">
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+			<th>Category</th>
+			<th>Food type</th>
+			<th>Operating hours</th>
+			<th>Price range</th>
+			<th>Image url</th>
+			<th>Announcement</th>
+			<th>Canteen</th>
+			<th>Actions</th>
+		</tr>
+		<% @stalls.each do |stall| %>
+		<tr>
+			<td><%= stall.name %></td>
+			<td><%= stall.location %></td>
+			<td><%= stall.category %></td>
+			<td><%= stall.food_type %></td>
+			<td><%= stall.operating_hours %></td>
+			<td><%= stall.price_range %></td>
+			<td><%= stall.image_url %></td>
+			<td><%= stall.announcement %></td>
+			<td><%= stall.canteen %></td>
+			<td><%= link_to 'Show', stall %>
+			<%= link_to 'Edit', edit_stall_path(stall) %>
+			<%= link_to 'Destroy', stall, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+		<% end %>
+	</table>
+</div>
+<br />
+<%= link_to 'New Stall', new_stall_path %> 

@@ -1,0 +1,53 @@
+<%= form_for(@stall) do |f| %>
+  <% if @stall.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stall.errors.count, "error") %> prohibited this stall from being saved:</h2>
+
+      <ul>
+      <% @stall.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_area :location, :rows => "3" %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :food_type %><br />
+    <%= f.text_field :food_type %>
+  </div>
+  <div class="field">
+    <%= f.label :operating_hours %><br />
+    <%= f.text_area :operating_hours, :rows => "5" %>
+  </div>
+  <div class="field">
+    <%= f.label :price_range %><br />
+    <%= f.text_area :price_range, :rows => "1" %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :announcement %><br />
+    <%= f.text_area :announcement, :rows => "5" %>
+  </div>
+  <div class="field">
+    <%= f.label :canteen %><br />
+    <%= f.text_field :canteen %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
