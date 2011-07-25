@@ -1,35 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @canteen.name %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= @canteen.location %>
-</p>
-
-<p>
-  <b>No of stalls:</b>
-  <%= @canteen.no_of_stalls %>
-</p>
-
-<p>
-  <b>Operating hours:</b>
-  <%= @canteen.operating_hours %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @canteen.image_url %>
-</p>
-
-<p>
-  <b>Announcement:</b>
-  <%= @canteen.announcement %>
-</p>
-
-
+<% @title = "Canteen" %>
+<div id="content">
+	<div class="graytitle">
+		<%= @canteen.name %>
+	</div>
+	<ul class="pageitem">
+		<li class="textbox">
+			<p>
+				<%= image_tag(@canteen.image_url) %>
+			</p>
+		</li>
+		<li class="textbox">
+			<span class="name"><%= simple_format(@canteen.location) %></span><span class="ext"></span>
+			<br>
+			<span class="name"><%= @canteen.no_of_stalls %> stalls</span><span class="ext"></span>
+			<br>
+			<span class="name"><%= simple_format(@canteen.operating_hours) %></span><span class="ext"></span>
+			<!--
+			<p>
+			<b>Announcement:</b>
+			<%= @canteen.announcement %>
+			</p>
+			-->
+		</li>
+	</ul>
+</div>
+<% if admin? %>
 <%= link_to 'Edit', edit_canteen_path(@canteen) %> |
 <%= link_to 'Back', canteens_path %>
+<% end %>

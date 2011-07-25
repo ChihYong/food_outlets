@@ -1,4 +1,6 @@
 class CanteensController < ApplicationController
+  
+  before_filter :authorize, :except => [:show]
   # GET /canteens
   # GET /canteens.xml
   def index
