@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    session[:user_name] = params[:user_name]
     session[:password] = params[:password]
     redirect_to food_outlets_path, :notice => "Successfully logged in"
   end

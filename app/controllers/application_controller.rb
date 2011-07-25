@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def admin?
+    session[:user_name] == USER_NAME
     session[:password] == PASSWORD
   end
 
