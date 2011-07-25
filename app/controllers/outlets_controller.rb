@@ -1,4 +1,6 @@
 class OutletsController < ApplicationController
+
+  before_filter :authorize, :except => [:show]
   # GET /outlets
   # GET /outlets.xml
   def index
@@ -80,4 +82,5 @@ class OutletsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end

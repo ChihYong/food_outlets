@@ -1,7 +1,13 @@
 FoodOutlets::Application.routes.draw do
-  
+
+  get "login" => "sessions#new", :as => "login"
+
+  get "logout" => "sessions#destroy", :as => "logout"
+
   match '/food_outlets', :to => 'pages#food_outlets'
   
+  resources :sessions
+
   resources :canteens
 
   resources :outlets
@@ -57,9 +63,9 @@ FoodOutlets::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => "pages#home"
 
-  # See how all your routes lay out with "rake routes"
+# See how all your routes lay out with "rake routes"
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+# This is a legacy wild controller route that's not recommended for RESTful applications.
+# Note: This route will make all actions in every controller accessible via GET requests.
+# match ':controller(/:action(/:id(.:format)))'
 end

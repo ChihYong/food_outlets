@@ -20,6 +20,8 @@
 	<p>
 		<%= @outlet.announcements %>
 	</p>
+	<% if admin? %>
 	<%= link_to 'Edit', edit_outlet_path(@outlet) %> |
 	<%= link_to 'Back', outlets_path %>
+	<% end %>
 </div>
