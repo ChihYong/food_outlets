@@ -1,5 +1,7 @@
 FoodOutlets::Application.routes.draw do
 
+  resources :stalls
+
   get "login" => "sessions#new", :as => "login"
 
   get "logout" => "sessions#destroy", :as => "logout"
